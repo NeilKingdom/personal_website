@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animation-delay": "^1.2.0"
+  }
+}

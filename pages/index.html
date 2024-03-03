@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neil Kingdom</title>
+        <link href="/res/styles/output.css" rel="stylesheet" />
+        <!-- Fontawesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+        <!-- HTMX -->
+        <script 
+            src="https://unpkg.com/htmx.org@1.9.10" 
+            integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" 
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="overflow-x-hidden">
+        <nav id="menu">
+            <div class="group flex flex-row justify-around items-center fixed 
+                top-0 left-0 min-w-32 min-h-12"
+            >
+                <div class="absolute w-full h-full bg-neutral-400 rounded-r-md py-2
+                    transition duration-500 ease-in-out transform group-hover:scale-x-200"
+                ></div>
+                <strong class="absolute left-2 transition duration-500 ease-in-out 
+                    transform group-hover:translate-x-10"
+                >
+                    Menu
+                </strong>
+                <a id="hamburger-menu" class="absolute right-2 px-3 py-2 
+                    hover:bg-neutral-600 hover:cursor-pointer
+                    transition duration-500 ease-in-out transform group-hover:translate-x-12"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+        <header class="w-screen p-10">
+            <div class="flex flex-col items-center">
+                <div id="title" class="flex flex-col items-center gap-y-5 text-neutral-500">
+                    <p class="text-8xl">Neil Kingdom</p>
+                    <p class="text-4xl">Software Engineer</p>
+                </div>
+                <div id="nav-links" class="flex flex-row justify-center flex-wrap
+                    gap-x-10 text-2xl text-neutral-200 mt-10"
+                >
+                    {{range .Links}}
+                        <a class="hover:text-green-400 hover:underline" href="">{{.Name}}</a>
+                    {{end}}
+                <div>
+            </div>
+        </header>
+        <main class="p-20 text-2xl">
+            <article class="flex flex-col place-items-center h-dvh">
+                <p id="intro">This is some super epic content!!!</p>   
+                <div id="visible-window" class="flex flex-col overflow-clip w-3/5">
+                    <div id="row1" class="flex flex-row w-full"> 
+                        <img id="tile1" src="/res/img/image.jpg" alt="Image not found" 
+                            width="175" height="250" 
+                            class="opacity-0 bg-cyan-950 rounded-md text-center 
+                            animate-conveyor-x"
+                        />
+                        <img id="tile2" src="/res/img/image.jpg" alt="Image not found" 
+                            width="175" height="250" 
+                            class="opacity-0 bg-cyan-950 rounded-md text-center 
+                            animate-conveyor-x animation-delay-8000"
+                        />
+                    </div>
+                    <div id="row2" class="flex flex-row w-full"> 
+                        <img id="tile1" src="/res/img/image.jpg" alt="Image not found" 
+                            width="175" height="250" 
+                            class="opacity-0 bg-cyan-950 rounded-md text-center 
+                            animate-conveyor-x-rev"
+                        />
+                        <img id="tile2" src="/res/img/image.jpg" alt="Image not found" 
+                            width="175" height="250" 
+                            class="opacity-0 bg-cyan-950 rounded-md text-center 
+                            animate-conveyor-x-rev animation-delay-8000"
+                        />
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer id="footer" class="flex flex-col justify-around items-center w-screen min-h-80
+            bg-gradient-to-r from-indigo-500 to-blue-500"
+        >
+            <div><i class="fa-brands fa-github"></i></div>
+            <div><i class="fa-brands fa-github"></i></div>
+            <div><i class="fa-brands fa-github"></i></div>
+        </footer>
+    </body>
+</html>
