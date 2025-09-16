@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13",
+    "tailwindcss-animation-delay": "^2.0.2"
+  }
+}

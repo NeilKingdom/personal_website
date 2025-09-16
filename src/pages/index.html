@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" title="Neil Kingdom" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neil Kingdom</title>
+        <!-- Tailwind stylesheet -->
+        <link rel="stylesheet" href="/assets/css/tailwind.css" />
+        <!-- Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <!-- HTMX -->
+        <script
+            src="https://unpkg.com/htmx.org@1.9.10"
+            integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+            crossorigin="anonymous"
+            defer
+        ></script>
+    </head>
+    <body class="overflow-x-hidden">
+        <aside id="menu">
+            <div class="bg-blue-200 fixed flex flex-row justify-around items-center
+                top-0 left-0 min-w-32 min-h-12 hover:cursor-pointer bg-blue-500">
+                <strong>Menu</strong>
+                <a id="hamburger-menu" class="px-3 py-2">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </aside>
+        <header id="header" class="w-screen p-10 bg-gray-800">
+            <div id="title" class="flex flex-col items-center gap-y-5 text-neutral-500">
+                <p class="text-8xl">Neil Kingdom</p>
+                <p class="text-4xl">Software Engineer</p>
+            </div>
+            <nav id="nav-links" class="flex flex-row justify-center flex-wrap
+                gap-x-10 text-2xl text-neutral-200 mt-10">
+                <a hx-post="/about" hx-swap="innerHTML" hx-target="#main-content" class="hover:text-green-400 hover:underline">About</a>
+                <a hx-post="/resume" hx-swap="innerHTML" hx-target="#main-content" class="hover:text-green-400 hover:underline">Resume</a>
+                <a hx-post="/projects" hx-swap="innerHTML" hx-target="#main-content" class="hover:text-green-400 hover:underline">Projects</a>
+                <a hx-post="/blog" hx-swap="innerHTML" hx-target="#main-content" class="hover:text-green-400 hover:underline">Blog</a>
+                <nav>
+        </header>
+        <main class="p-20 text-2xl">
+            <article id="main-content" class="flex flex-col place-items-center h-dvh p-30"></article>
+        </main>
+        <footer id="footer" class="flex flex-row justify-center items-center w-screen min-h-80
+            bg-gradient-to-r from-indigo-500 to-blue-500"
+        >
+            <div class="p-10"><i class="fa-brands fa-github"></i></div>
+            <div class="p-10"><i class="fa-brands fa-github"></i></div>
+            <div class="p-10"><i class="fa-brands fa-github"></i></div>
+        </footer>
+    </body>
+</html>

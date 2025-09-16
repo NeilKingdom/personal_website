@@ -1,4 +1,7 @@
 #!/bin/sh
 
-npx tailwindcss -i ./static/styles/input.css -o ./static/styles/tailwind.css && \
-go run main.go
+if ! [ -f "assets/css/tailwind.css" ]; then
+    npx tailwindcss -i "assets/css/input.css" -o "assets/css/tailwind.css"
+fi
+
+(cd src && go run main.go)
